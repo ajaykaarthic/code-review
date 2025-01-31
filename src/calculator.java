@@ -1,6 +1,6 @@
 class Calculator {
     public int divide(int a, int b) {
-        return a / b;
+        return a / b; // Potential division by zero
     }
 
     public int sumArray(int[] numbers) {
@@ -14,6 +14,12 @@ class Calculator {
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        Calculator calc = new Calculator();
+        
+        int result = calc.divide(10, 0);
+        System.out.println("Division Result: " + result);
+
+        int[] nums = {1, 2, 3, 4};
+        System.out.println("Sum: " + calc.sumArray(nums));
     }
 }
